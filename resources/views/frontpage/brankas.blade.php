@@ -31,7 +31,7 @@
                         <td>{{ $b['judul'] }}</td>
                         <td>{{ $b['tahun'] }}</td>
                         <td>{{ $b['brankas'] }}</td>
-                        <td>detail</td>
+                        <td><a href="{{ route('frontpage.brankas.show', $b['id']) }}">Detail</a></td>
                     </tr>
                     @endforeach
                 </tbody>				

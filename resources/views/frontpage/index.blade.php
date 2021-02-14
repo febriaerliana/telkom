@@ -6,7 +6,7 @@
 <header class="masthead">
     <div class="container">
         <div class="masthead-heading text-uppercase">Brankas Logistik</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="brankas/create">Tambah Data</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('frontpage.brankas.create') }}">Tambah Data</a>
     </div>
 </header>
 <!-- Profil-->

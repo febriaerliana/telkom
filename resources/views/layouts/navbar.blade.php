@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index#logistik">Logistik</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('frontpage.index') }}#logistik">Logistik</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index#fitur">Fitur</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index#denah">Denah</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/brankas">Brankas</a></li>

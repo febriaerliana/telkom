@@ -15,5 +15,6 @@ Route::get('index', 'Frontpage\IndexController@index')->name('frontpage.index');
 
 // BRANKAS
 Route::get('brankas', 'Frontpage\BrankasController@index')->name('frontpage.brankas');
+Route::get('brankas/{id}', 'Frontpage\BrankasController@show')->name('frontpage.brankas.show');
 Route::get('brankas/create', 'Frontpage\BrankasController@create')->name('frontpage.brankas.create');
 Route::post('brankas','Frontpage\BrankasController@store')->name('frontpage.brankas.store');

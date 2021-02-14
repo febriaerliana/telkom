@@ -17,6 +17,14 @@ class BrankasController extends Controller
         ]);
     }
 
+    public function show($id)
+    {
+        $brankas = Brankas::find($id);
+        return view('frontpage.brankas-detail')->with([
+            'brankas' => $brankas
+        ]);
+    }
+
     public function create() 
     {
         return view('frontpage.brankas-create');
