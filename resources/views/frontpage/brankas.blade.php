@@ -3,10 +3,10 @@
 @section('title', 'Brankas')
 @section('content')
     <!-- Judul -->
-    <header class="marsthead" >
+    <header class="marsthead">
         <div class="container">
             <div class="marsthead-heading text-uppercase" style="margin-bottom: 30px;">Pencarian data</div> 
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="brankas/create">Tambah Data</a>               
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('frontpage.brankas.create') }}">Tambah Data</a>               
         </div>
     </header>         
     <!-- Tables -->

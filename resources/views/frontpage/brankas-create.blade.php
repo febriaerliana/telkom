@@ -94,10 +94,10 @@
 				</div>
 				<div class="container-contact100-form-btn" >
 					<button class="contact100-form-btn" >
-						<span href="brankas.php">
+						<a href="{{ route('frontpage.brankas') }}">
 							Simpan
 							<i class="fa fa-long-arrow-right m-l-7" type="submit" aria-hidden="true"></i>
-						</span>
+						</a>
 					</button>
 				</div>
 			</form>			
@@ -106,59 +106,35 @@
 @endsection
 
 @section('script')
+
+{{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
 <script src="{{ asset('vendors/select2/select2.min.js') }}"></script>
-<script>
-	$(".js-select2").each(function(){
-		$(this).select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $(this).next('.dropDownSelect2')
-		});
-		$(".js-select2").each(function(){
-			$(this).on('select2:close', function (e){
-				if($(this).val() == "Please chooses") {
-					$('.js-show-brankas').slideUp();
-				}
-				else {
-					$('.js-show-brankas').slideUp();
-					$('.js-show-brankas').slideDown();
-				}
-			});
-		});
-	})
-</script>
-<script src="{{ asset('vendors/daterangepicker/moment.min.js') }}"></script>
-<script src="{{ asset('vendors/daterangepicker/daterangepicker.js') }}"></script>
-<script src="{{ asset('vendors/countdowntime/countdowntime.js') }}"></script>
-<script src="{{ asset('vendors/noui/nouislider.min.js') }}"></script>
-<script>
-	var filterBar = document.getElementById('filter-bar');
-	noUiSlider.create(filterBar, {
-		start: [ 1500, 3900 ],
-		connect: true,
-		range: {
-			'min': 1500,
-			'max': 7500
-		}
-	});
-	var skipValues = [
-	document.getElementById('value-lower'),
-	document.getElementById('value-upper')
-	];
-	filterBar.noUiSlider.on('update', function( values, handle ) {
-		skipValues[handle].innerHTML = Math.round(values[handle]);
-		$('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
-		$('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
-	});
-</script>
-<script src="{{ asset('js/main.js') }}"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-23581568-13');
-</script>
+	<script>
+		$(function(){
+			$(".js-select2").each(function(){
+				$(this).select2({
+					minimumResultsForSearch: 10,
+					dropdownParent: $(this).next()
+				});
+				// $(".js-select2").each(function(){
+				// 	$(this).on('select2:close', function (e){
+				// 		if($(this).val() == "Please chooses") {
+				// 			$('.js-show-brankas').slideUp();
+				// 		}
+				// 		else {
+				// 			$('.js-show-brankas').slideUp();
+				// 			$('.js-show-brankas').slideDown();
+				// 		}
+				// 	});
+				// });
+			})
+			// $('#brankas, #rincian').select2({
+			// 	minimumResultsForSearch: 20,
+			// 	dropdownParent: $(this).next('.dropDownSelect2')
+			// });
+		})
+
+	</script>
 @endsection
 
 

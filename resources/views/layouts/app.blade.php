@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
 	
     <link rel="stylesheet" href="{{ asset('fonts/iconic/css/material-design-iconic-font.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/select2/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendors/select2/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/docs.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
