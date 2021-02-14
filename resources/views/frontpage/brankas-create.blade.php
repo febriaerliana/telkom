@@ -6,7 +6,8 @@
     <!-- Form -->
 	<div class="container-contact100 " style="padding-top: 170px; padding-bottom: 70px;">
 		<div class="wrap-contact100">
-			<form method="post" action="simpan.php" class="contact100-form validate-form">
+			<form method="post" action="/brankas" class="contact100-form validate-form">
+				@csrf
 				<span class="contact100-form-title text-uppercase">
 					Tambah Data
 				</span>
@@ -16,7 +17,7 @@
 				</div>
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tolong Isikan Nama Data">
 					<span class="label-input100" name="nama">Nomor Dokumen</span>
-					<input class="input100" type="text" name="nomor_dokumen" placeholder="Isikan Nomor Dokumen">
+					<input class="input100" type="text" name="no_dokumen" placeholder="Isikan Nomor Dokumen">
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tolong Isikan Waktu Data">
 					<span class="label-input100">Tahun *</span>
@@ -77,11 +78,11 @@
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tolong Isikan Nama Data">
 					<span class="label-input100" name="nama">Nomor PO</span>
-					<input class="input100" type="text" name="nomor_po" placeholder="Isikan Nomor PO">
+					<input class="input100" type="text" name="no_po" placeholder="Isikan Nomor PO">
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tolong Isikan Waktu Data">
 					<span class="label-input100">Nomor SPK</span>
-					<input class="input100" type="text" name="nomor_spk" placeholder="Isikan Nomor SPK">
+					<input class="input100" type="text" name="no_spk" placeholder="Isikan Nomor SPK">
 				</div>
 				<div class="wrap-input100 validate-input bg1" data-validate = "Tolong Isikan Waktu Data">
 					<span class="label-input100">Lokasi</span>
@@ -95,7 +96,7 @@
 					<button class="contact100-form-btn" >
 						<span href="brankas.php">
 							Simpan
-							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							<i class="fa fa-long-arrow-right m-l-7" type="submit" aria-hidden="true"></i>
 						</span>
 					</button>
 				</div>
@@ -103,3 +104,62 @@
 		</div>
 	</div>
 @endsection
+
+@section('script')
+<script src="{{ asset('vendors/select2/select2.min.js') }}"></script>
+<script>
+	$(".js-select2").each(function(){
+		$(this).select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $(this).next('.dropDownSelect2')
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				if($(this).val() == "Please chooses") {
+					$('.js-show-brankas').slideUp();
+				}
+				else {
+					$('.js-show-brankas').slideUp();
+					$('.js-show-brankas').slideDown();
+				}
+			});
+		});
+	})
+</script>
+<script src="{{ asset('vendors/daterangepicker/moment.min.js') }}"></script>
+<script src="{{ asset('vendors/daterangepicker/daterangepicker.js') }}"></script>
+<script src="{{ asset('vendors/countdowntime/countdowntime.js') }}"></script>
+<script src="{{ asset('vendors/noui/nouislider.min.js') }}"></script>
+<script>
+	var filterBar = document.getElementById('filter-bar');
+	noUiSlider.create(filterBar, {
+		start: [ 1500, 3900 ],
+		connect: true,
+		range: {
+			'min': 1500,
+			'max': 7500
+		}
+	});
+	var skipValues = [
+	document.getElementById('value-lower'),
+	document.getElementById('value-upper')
+	];
+	filterBar.noUiSlider.on('update', function( values, handle ) {
+		skipValues[handle].innerHTML = Math.round(values[handle]);
+		$('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+		$('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	});
+</script>
+<script src="{{ asset('js/main.js') }}"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-23581568-13');
+</script>
+@endsection
+
+
+	

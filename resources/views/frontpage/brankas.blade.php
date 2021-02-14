@@ -6,7 +6,7 @@
     <header class="marsthead" >
         <div class="container">
             <div class="marsthead-heading text-uppercase" style="margin-bottom: 30px;">Pencarian data</div> 
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="tambah.php">Tambah Data</a>               
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="brankas/create">Tambah Data</a>               
         </div>
     </header>         
     <!-- Tables -->
@@ -31,7 +31,7 @@
                         <td>{{ $b['judul'] }}</td>
                         <td>{{ $b['tahun'] }}</td>
                         <td>{{ $b['brankas'] }}</td>
-                        <td>{{ $b[''] }}</td>
+                        <td>detail</td>
                     </tr>
                     @endforeach
                 </tbody>				

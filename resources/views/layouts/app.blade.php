@@ -42,7 +42,7 @@
     <script src="{{asset('mail/contact_me.js')}}"></script>
     <script src="{{asset('js/application.js')}}"></script>
     <script src="{{asset('js/fullcalendar.min.js')}}"></script> --}}
-    {{-- <script src="{{asset('js/main.js')}}"></script> --}}
+    <script src="{{asset('js/main.js')}}"></script>
 
 </body>
 </html>
