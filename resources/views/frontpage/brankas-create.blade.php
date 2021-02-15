@@ -6,20 +6,20 @@
     <!-- Form -->
 	<div class="container-contact100 " style="padding-top: 170px; padding-bottom: 70px;">
 		<div class="wrap-contact100">
-			<form method="post" action="/brankas" class="contact100-form validate-form">
+			<form method="post" action="{{ route('frontpage.brankas') }}" class="contact100-form validate-form">
 				@csrf
 				<span class="contact100-form-title text-uppercase">
 					Tambah Data
 				</span>
-				<div class="wrap-input100 validate-input bg1" data-validate = "Tolong Isikan Waktu Data">
+				<div class="wrap-input100 validate-input bg1" data-validate = "Harap Isi Data">
 					<span class="label-input100">Judul *</span>
 					<input class="input100" type="text" name="judul" placeholder="Isikan Judul Kegiatan" required>
 				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tolong Isikan Nama Data">
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tidak Ada No. Dokumen">
 					<span class="label-input100" name="nama">Nomor Dokumen</span>
 					<input class="input100" type="text" name="no_dokumen" placeholder="Isikan Nomor Dokumen">
 				</div>				
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tolong Isikan Waktu Data">
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Harap Isi Data">
 					<span class="label-input100">Tahun *</span>
 					<input class="input100" type="number" name="tahun" placeholder="Isikan Tahun" required>
 				</div>
@@ -76,15 +76,15 @@
 						<div class="dropDownSelect2"></div>
 					</div>
 				</div>				
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tolong Isikan Nama Data">
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tidak Ada No. PO">
 					<span class="label-input100" name="nama">Nomor PO</span>
 					<input class="input100" type="text" name="no_po" placeholder="Isikan Nomor PO">
 				</div>				
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tolong Isikan Waktu Data">
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tidak Ada No. SPK">
 					<span class="label-input100">Nomor SPK</span>
 					<input class="input100" type="text" name="no_spk" placeholder="Isikan Nomor SPK">
 				</div>
-				<div class="wrap-input100 validate-input bg1" data-validate = "Tolong Isikan Waktu Data">
+				<div class="wrap-input100 validate-input bg1" data-validate = "Tidak Ada Lokasi">
 					<span class="label-input100">Lokasi</span>
 					<input class="input100" type="text" name="lokasi" placeholder="Isikan Lokasi">
 				</div>
@@ -94,10 +94,8 @@
 				</div>
 				<div class="container-contact100-form-btn" >
 					<button class="contact100-form-btn" >
-						<a href="{{ route('frontpage.brankas') }}">
 							Simpan
 							<i class="fa fa-long-arrow-right m-l-7" type="submit" aria-hidden="true"></i>
-						</a>
 					</button>
 				</div>
 			</form>			

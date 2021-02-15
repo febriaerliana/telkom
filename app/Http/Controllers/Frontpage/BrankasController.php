@@ -30,10 +30,11 @@ class BrankasController extends Controller
         return view('frontpage.brankas-create');
     }
 
-    // method untuk insert data ke table pegawai
+    // method untuk insert data ke table brankas
     public function store(Request $request)
     {
-        // insert data ke table pegawai
+
+        // insert data ke table brankas
         DB::table('brankas')->insert([
             'judul' => $request->judul,
             'no_dokumen' => $request->no_dokumen,
@@ -45,7 +46,7 @@ class BrankasController extends Controller
             'lokasi' => $request->lokasi,
             'keterangan' => $request->keterangan
         ]);
-        // alihkan halaman ke halaman pegawai
+        // alihkan halaman ke halaman brankas
         return redirect('frontpage.brankas');
     
     }
