@@ -6,7 +6,7 @@
     <!-- Form -->
 	<div class="container-contact100 " style="padding-top: 170px; padding-bottom: 70px;">
 		<div class="wrap-contact100">
-			<form method="post" action="{{ route('frontpage.brankas') }}" class="contact100-form validate-form">
+			<form method="post" action="{{ route('frontpage.brankas.store') }}" class="contact100-form validate-form">
 				@csrf
 				<span class="contact100-form-title text-uppercase">
 					Tambah Data
@@ -15,13 +15,13 @@
 					<span class="label-input100">Judul *</span>
 					<input class="input100" type="text" name="judul" placeholder="Isikan Judul Kegiatan" required>
 				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tidak Ada No. Dokumen">
-					<span class="label-input100" name="nama">Nomor Dokumen</span>
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Tidak Ada No. Dokumen">
+					<span class="label-input100" >Nomor Dokumen</span>
 					<input class="input100" type="text" name="no_dokumen" placeholder="Isikan Nomor Dokumen">
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Harap Isi Data">
 					<span class="label-input100">Tahun *</span>
-					<input class="input100" type="number" name="tahun" placeholder="Isikan Tahun" required>
+					<input class="input100" type="text" name="tahun" placeholder="Isikan Tahun" required>
 				</div>
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">Brankas *</span>
@@ -76,8 +76,8 @@
 						<div class="dropDownSelect2"></div>
 					</div>
 				</div>				
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" name="nama" data-validate="Tidak Ada No. PO">
-					<span class="label-input100" name="nama">Nomor PO</span>
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Tidak Ada No. PO">
+					<span class="label-input100">Nomor PO</span>
 					<input class="input100" type="text" name="no_po" placeholder="Isikan Nomor PO">
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tidak Ada No. SPK">

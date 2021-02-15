@@ -47,7 +47,7 @@ class BrankasController extends Controller
             'keterangan' => $request->keterangan
         ]);
         // alihkan halaman ke halaman brankas
-        return redirect('frontpage.brankas');
+        return redirect()->route('frontpage.brankas');
     
     }
 }

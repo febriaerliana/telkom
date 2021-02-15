@@ -17,10 +17,10 @@ class CreateBrankasTable extends Migration
             $table->bigIncrements('id');
             $table->string('judul');
             $table->string('no_dokumen');
-            $table->integer('tahun');
+            $table->string('tahun');
             $table->string('brankas');
             $table->string('rincian');
-            $table->bigInteger('no_po');
+            $table->string('no_po');
             $table->string('no_spk');
             $table->string('lokasi');
             $table->text('keterangan');
