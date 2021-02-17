@@ -20,7 +20,7 @@
                     <td><span id="no_dokumen">{{ $brankas->no_dokumen }}</span></td>
                 </tr>
                 <tr>
-                    <th style="">Tahun</th>
+                    <th style="">Waktu</th>
                     <td><span id="tahun">{{ $brankas->tahun }}</span></td>
                 </tr>
                 <tr>

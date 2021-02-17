@@ -6,28 +6,28 @@
     <!-- Form -->
 	<div class="container-contact100 " style="padding-top: 170px; padding-bottom: 70px;">
 		<div class="wrap-contact100">
-			<form method="post" action="{{ route('frontpage.brankas.store') }}" class="contact100-form validate-form">
+			<form method="post" action="{{ route('frontpage.brankas.update') }}" class="contact100-form validate-form">
 				@csrf
 				<span class="contact100-form-title text-uppercase">
-					Tambah Data
+					Edit Data
 				</span>
 				<div class="wrap-input100 validate-input bg1" data-validate = "Harap Isi Data">
 					<span class="label-input100">Judul *</span>
-					<input class="input100" type="text" name="judul" placeholder="Isikan Judul Kegiatan" required>
+					<input class="input100" type="text" name="judul" value="{{ $brankas->judul }}">
 				</div>
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Tidak Ada No. Dokumen, isi (-)">
 					<span class="label-input100" >Nomor Dokumen</span>
-					<input class="input100" type="text" name="no_dokumen" placeholder="Isikan Nomor Dokumen">
+					<input class="input100" type="text" name="no_dokumen" value="{{ $brankas->no_dokumen }}">
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Harap Isi Data">
 					<span class="label-input100">Waktu *</span>
-					<input class="input100" type="text" name="tahun" placeholder="Isikan Waktu" required>
+					<input class="input100" type="text" name="tahun" value="{{ $brankas->tahun }}">
 				</div>
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">Brankas *</span>
 					<div>
 						<select class="js-select2" name="brankas">
-							<option>Pilih Brankas</option>
+							<option>{{ $brankas->brankas }}</option>
 							<option>Brankas L3A</option>
 							<option>Brankas L3B</option>
 							<option>Brankas L3C</option>
@@ -48,7 +48,7 @@
 					<span class="label-input100">Rincian *</span>
 					<div>
 						<select class="js-select2" name="rincian">
-							<option>Pilih Rincian</option>
+							<option>{{ $brankas->rincian }}</option>
 							<option>Arsip Capex</option>
 							<option>Arsip Notulen</option>
 							<option>Bacaan DOA</option>
@@ -78,24 +78,24 @@
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Tidak Ada No. PO, isi (-)">
 					<span class="label-input100">Nomor PO</span>
-					<input class="input100" type="text" name="no_po" placeholder="Isikan Nomor PO">
+					<input class="input100" type="text" name="no_po" value="{{ $brankas->no_po }}">
 				</div>				
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Tidak Ada No. SPK, isi (-)">
 					<span class="label-input100">Nomor SPK</span>
-					<input class="input100" type="text" name="no_spk" placeholder="Isikan Nomor SPK">
+					<input class="input100" type="text" name="no_spk" value="{{ $brankas->no_spk }}">
 				</div>
 				<div class="wrap-input100 validate-input bg1" data-validate = "Tidak Ada Lokasi, isi (-)">
 					<span class="label-input100">Lokasi</span>
-					<input class="input100" type="text" name="lokasi" placeholder="Isikan Lokasi">
+					<input class="input100" type="text" name="lokasi" value="{{ $brankas->lokasi }}">
 				</div>
 				<div class="wrap-input100 validate-input bg0 rs1-alert-validate mt-3" data-validate = "Tidak Ada Keterangan, isi (-)">
 					<span class="label-input100">Keterangan</span>
-					<textarea class="input100" name="keterangan" placeholder="Tulis Pesanmu Disini..."></textarea>
+					<textarea class="input100" name="keterangan" value="{{ $brankas->keterangan }}"></textarea>
 				</div>
 				<div class="container-contact100-form-btn" >
 					<button class="contact100-form-btn" >
 							Simpan
-							<i class="fa fa-long-arrow-right m-l-7" type="submit" aria-hidden="true"></i>
+							<i class="fa fa-long-arrow-right m-l-7" type="submit" value="Simpan" aria-hidden="true"></i>
 					</button>
 				</div>
 			</form>			
@@ -119,6 +119,3 @@
 
 	</script>
 @endsection
-
-
-	

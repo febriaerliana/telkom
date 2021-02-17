@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Brankas')
+@section('title', 'Pencarian')
 @section('content')
     <!-- Judul -->
     <header class="marsthead">
-        <div class="container">
-            <div class="marsthead-heading text-uppercase" style="margin-bottom: 30px;">Pencarian data</div> 
+        <div class="container" style="margin-top: 40px;">
+            <div class="marsthead-heading text-uppercase" style="margin-bottom: 20px;">Pencarian data</div> 
             <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('frontpage.brankas.create') }}">Tambah Data</a>               
         </div>
     </header>         
@@ -18,7 +18,7 @@
                         <th>Nomor</th>
                         <th>Nomor PO</th>
                         <th>Judul</th>
-                        <th>Tahun</th>
+                        <th>Waktu</th>
                         <th>Brankas</th>
                         <th>Action</th>                            				
                     </tr>
@@ -31,7 +31,8 @@
                         <td>{{ $b['judul'] }}</td>
                         <td>{{ $b['tahun'] }}</td>
                         <td>{{ $b['brankas'] }}</td>
-                        <td><a href="{{ route('frontpage.brankas.show', $b['id']) }}">Detail</a></td>
+                        <td><a href="{{ route('frontpage.brankas.show', $b['id']) }}">Detail</a>
+                        <a href="{{ route('frontpage.brankas.edit', $b['id']) }}">Edit</a></td>
                     </tr>
                     @endforeach
                 </tbody>				

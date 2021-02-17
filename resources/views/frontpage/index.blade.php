@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Index')
+@section('title', 'Home')
 
 @section('content')
 <header class="masthead">
     <div class="container">
-        <div class="masthead-heading text-uppercase">Brankas Logistik</div>
+        <div class="masthead-heading text-uppercase">the inventory</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('frontpage.brankas.create') }}">Tambah Data</a>
     </div>
 </header>
@@ -77,7 +77,7 @@
             <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <img class="img-fluid" src="{{ asset('img/denah/denah.jpg') }}" alt="" />
+                        <img class="img-fluid" src="{{ asset('img/denah/denahh.png') }}" alt="" />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-subheading text-muted pt-3">Dua Dimensi</div>
@@ -109,7 +109,7 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here-->
                             <h2 class="text-uppercase">Denah Dua Dimensi</h2>                                    
-                            <img class="img-fluid d-block mx-auto" src="{{ asset('img/denah/denah.jpg') }}" alt="" />
+                            <img class="img-fluid d-block mx-auto" src="{{ asset('img/denah/denahh.png') }}" alt="" />
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                             <ul class="list-inline">
                                 <li>Tanggal: 3 Februari 2021</li>

@@ -50,5 +50,28 @@ class BrankasController extends Controller
         return redirect()->route('frontpage.brankas');
     
     }
-}
 
+    public function edit($id)
+    {
+            $brankas = Brankas::find($id);
+            return view('frontpage.brankas-edit')->with([
+                'brankas' => $brankas
+        ]);
+    }
+
+    public function update(Request $request){
+        $brankas = Brankas::where('id',$request->id)
+        ->update([
+            'judul' => $request->judul,
+            'no_dokumen' => $request->no_dokumen,
+            'tahun' => $request->tahun,
+            'brankas' => $request->brankas,
+            'rincian' => $request->rincian,
+            'no_po' => $request->no_po,
+            'no_spk' => $request->no_spk,
+            'lokasi' => $request->lokasi,
+            'keterangan' => $request->keterangan
+         ]);
+        return redirect()->route('frontpage.brankas');
+       }
+}
