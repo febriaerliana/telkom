@@ -32,7 +32,10 @@
                         <td>{{ $b['tahun'] }}</td>
                         <td>{{ $b['brankas'] }}</td>
                         <td><a href="{{ route('frontpage.brankas.show', $b['id']) }}">Detail</a>
-                        <a href="{{ route('frontpage.brankas.edit', $b['id']) }}">Edit</a></td>
+                                
+                            <a href="{{ route('frontpage.brankas.edit', $b['id']) }}">Edit</a>
+                                
+                            <a href="{{ route('frontpage.brankas.hapus', $b['id']) }}">Hapus</a></td>
                     </tr>
                     @endforeach
                 </tbody>				

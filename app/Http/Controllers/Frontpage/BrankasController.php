@@ -51,15 +51,21 @@ class BrankasController extends Controller
     
     }
 
+    // public function edit($id)
+    // {
+    //         $brankas = Brankas::find($id);
+    //         return view('frontpage.brankas-edit')->with([
+    //             'brankas' => $brankas
+    //     ]);
+    // }
     public function edit($id)
     {
             $brankas = Brankas::find($id);
-            return view('frontpage.brankas-edit')->with([
-                'brankas' => $brankas
-        ]);
+            return view('frontpage.brankas-edit',compact('brankas'));
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $brankas = Brankas::where('id',$request->id)
         ->update([
             'judul' => $request->judul,
@@ -73,5 +79,11 @@ class BrankasController extends Controller
             'keterangan' => $request->keterangan
          ]);
         return redirect()->route('frontpage.brankas');
-       }
+    }
+
+        public function hapus($id)
+    {
+        DB::table('brankas')->where('id',$id)->delete();
+        return redirect()->route('frontpage.brankas');
+    }
 }

@@ -20,3 +20,4 @@ Route::get('brankas/create', 'Frontpage\BrankasController@create')->name('frontp
 Route::post('brankas','Frontpage\BrankasController@store')->name('frontpage.brankas.store');
 Route::get('brankas/edit/{id}', 'Frontpage\BrankasController@edit')->name('frontpage.brankas.edit');
 Route::post('brankas/update','Frontpage\BrankasController@update')->name('frontpage.brankas.update');
+Route::get('brankas/hapus/{id}','Frontpage\BrankasController@hapus')->name('frontpage.brankas.hapus');
