@@ -64,7 +64,7 @@ class BrankasController extends Controller
             return view('frontpage.brankas-edit',compact('brankas'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         $brankas = Brankas::where('id',$request->id)
         ->update([

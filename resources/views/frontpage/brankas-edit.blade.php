@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Tambah Brankas')
+@section('title', 'Edit Data')
 
 @section('content')
     <!-- Form -->
 	<div class="container-contact100 " style="padding-top: 170px; padding-bottom: 70px;">
 		<div class="wrap-contact100">
-			<form method="post" action="{{ route('frontpage.brankas.update') }}" class="contact100-form validate-form">
-				@csrf
+			<form method="POST" action="{{ route('frontpage.brankas.update', $brankas['id']) }}" class="contact100-form validate-form">
+				@csrf @method('PUT')
 				<span class="contact100-form-title text-uppercase">
 					Edit Data
 				</span>
@@ -88,9 +88,9 @@
 					<span class="label-input100">Lokasi</span>
 					<input class="input100" type="text" name="lokasi" value="{{ $brankas->lokasi }}">
 				</div>
-				<div class="wrap-input100 validate-input bg0 rs1-alert-validate mt-3" data-validate = "Tidak Ada Keterangan, isi (-)">
+				<div class="wrap-input100 validate-input bg1 mt-3" data-validate = "Tidak Ada Keterangan, isi (-)">
 					<span class="label-input100">Keterangan</span>
-					<textarea class="input100" name="keterangan" value="{{ $brankas->keterangan }}"></textarea>
+					<input class="input100" type="text" name="keterangan" value="{{ $brankas->keterangan }}">
 				</div>
 				<div class="container-contact100-form-btn" >
 					<button class="contact100-form-btn" >

@@ -19,5 +19,5 @@ Route::get('brankas/show/{id}', 'Frontpage\BrankasController@show')->name('front
 Route::get('brankas/create', 'Frontpage\BrankasController@create')->name('frontpage.brankas.create');
 Route::post('brankas','Frontpage\BrankasController@store')->name('frontpage.brankas.store');
 Route::get('brankas/edit/{id}', 'Frontpage\BrankasController@edit')->name('frontpage.brankas.edit');
-Route::post('brankas/update','Frontpage\BrankasController@update')->name('frontpage.brankas.update');
+Route::put('brankas/update/{id}','Frontpage\BrankasController@update')->name('frontpage.brankas.update');
 Route::get('brankas/hapus/{id}','Frontpage\BrankasController@hapus')->name('frontpage.brankas.hapus');

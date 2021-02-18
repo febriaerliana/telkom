@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Detail')
+@section('title','Lihat Detail')
 @section('content')
 <!-- Judul -->
     <header class="marsthead" style="padding-bottom: 0px">

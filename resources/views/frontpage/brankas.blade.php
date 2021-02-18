@@ -23,19 +23,21 @@
                         <th>Action</th>                            				
                     </tr>
                 </thead>				
-                <tbody>
+                <tbody> 
                     @foreach($brankas as $b)
                     <tr>
                         <td>{{ $b['id'] }}</td>
                         <td>{{ $b['no_po'] }}</td>
                         <td>{{ $b['judul'] }}</td>
                         <td>{{ $b['tahun'] }}</td>
-                        <td>{{ $b['brankas'] }}</td>
-                        <td><a href="{{ route('frontpage.brankas.show', $b['id']) }}">Detail</a>
-                                
-                            <a href="{{ route('frontpage.brankas.edit', $b['id']) }}">Edit</a>
-                                
-                            <a href="{{ route('frontpage.brankas.hapus', $b['id']) }}">Hapus</a></td>
+                        <td style="width: 100px">{{ $b['brankas'] }}</td>                        
+                        <td style="width: 80px">                           
+                            <a type="button" style="margin-bottom:5px" href="{{ route('frontpage.brankas.show', $b['id']) }}"><i class="fa fa-eye" ></i></a>
+                                |
+                            <a type="button" style="margin-bottom:5px" href="{{ route('frontpage.brankas.edit', $b['id']) }}"><i class="fas fa-edit" ></i></a>
+                                |
+                            <a type="button" href="{{ route('frontpage.brankas.hapus', $b['id']) }}"><i class="fa fa-trash mr-1" ></i></a>                            
+                        </td>                    
                     </tr>
                     @endforeach
                 </tbody>				

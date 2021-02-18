@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tambah Brankas')
+@section('title', 'Tambah Data')
 
 @section('content')
     <!-- Form -->
@@ -88,9 +88,9 @@
 					<span class="label-input100">Lokasi</span>
 					<input class="input100" type="text" name="lokasi" placeholder="Isikan Lokasi">
 				</div>
-				<div class="wrap-input100 validate-input bg0 rs1-alert-validate mt-3" data-validate = "Tidak Ada Keterangan, isi (-)">
+				<div class="wrap-input100 validate-input bg1 mt-3" data-validate = "Tidak Ada Keterangan, isi (-)">
 					<span class="label-input100">Keterangan</span>
-					<textarea class="input100" name="keterangan" placeholder="Tulis Pesanmu Disini..."></textarea>
+					<input class="input100" type="text" name="keterangan" placeholder="Tulis Pesanmu Disini...">
 				</div>
 				<div class="container-contact100-form-btn" >
 					<button class="contact100-form-btn" >
