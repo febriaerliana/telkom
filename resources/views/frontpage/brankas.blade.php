@@ -32,11 +32,11 @@
                         <td>{{ $b['tahun'] }}</td>
                         <td style="width: 100px">{{ $b['brankas'] }}</td>                        
                         <td style="width: 80px">                           
-                            <a type="button" style="margin-bottom:5px" href="{{ route('frontpage.brankas.show', $b['id']) }}"><i class="fa fa-eye" ></i></a>
+                            <a type="button" data-toggle="tooltip" title="Detail" style="margin-bottom:5px" href="{{ route('frontpage.brankas.show', $b['id']) }}"><i class="fa fa-eye" ></i></a>
                                 |
-                            <a type="button" style="margin-bottom:5px" href="{{ route('frontpage.brankas.edit', $b['id']) }}"><i class="fas fa-edit" ></i></a>
+                            <a type="button" data-toggle="tooltip" title="Edit" style="margin-bottom:5px" href="{{ route('frontpage.brankas.edit', $b['id']) }}"><i class="fas fa-edit" ></i></a>
                                 |
-                            <a type="button" href="{{ route('frontpage.brankas.hapus', $b['id']) }}"><i class="fa fa-trash mr-1" ></i></a>                            
+                            <a type="button" data-toggle="tooltip" title="Hapus" href="{{ route('frontpage.brankas.hapus', $b['id']) }}"><i class="fa fa-trash mr-1" ></i></a>                            
                         </td>                    
                     </tr>
                     @endforeach
@@ -56,4 +56,5 @@
     <script>
         $('#example').DataTable()
     </script>
+
 @endsection
