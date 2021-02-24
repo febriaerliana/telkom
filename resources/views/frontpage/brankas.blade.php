@@ -15,8 +15,9 @@
             <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>Nomor</th>
+                        <th>No.</th>
                         <th>Nomor PO</th>
+                        <th>Rincian</th>
                         <th>Judul</th>
                         <th>Waktu</th>
                         <th>Brankas</th>
@@ -28,6 +29,7 @@
                     <tr>
                         <td>{{ $b['id'] }}</td>
                         <td>{{ $b['no_po'] }}</td>
+                        <td>{{ $b['rincian'] }}</td>
                         <td>{{ $b['judul'] }}</td>
                         <td>{{ $b['tahun'] }}</td>
                         <td style="width: 100px">{{ $b['brankas'] }}</td>                        
