@@ -77,20 +77,20 @@
             <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <img class="img-fluid" src="{{ asset('img/denah/denahh.png') }}" alt="" />
+                        <img class="img-fluid" src="{{ asset('img/denah/denah_2d.png') }}" alt="" />
                     </a>
                     <div class="portfolio-caption">
-                        <div class="portfolio-caption-subheading text-muted pt-3">Dua Dimensi</div>
+                        <div class="portfolio-caption-subheading text-muted pt-3">Dua Dimensi Unit Logistik</div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <img class="img-fluid" src="{{ asset('img/denah/denah.png') }}" alt="" />
+                        <img class="img-fluid" src="{{ asset('img/denah/denah_3d.jpg') }}" alt="" />
                     </a>
                     <div class="portfolio-caption">
-                        <div class="portfolio-caption-subheading text-muted pt-3">Tiga Dimensi</div>
+                        <div class="portfolio-caption-subheading text-muted pt-3">Tiga Dimensi Lantai 3 Keseluruhan</div>
                     </div>
                 </div>
             </div>
@@ -109,8 +109,8 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here-->
                             <h2 class="text-uppercase">Denah Dua Dimensi</h2>                                    
-                            <img class="img-fluid d-block mx-auto" src="{{ asset('img/denah/denahh.png') }}" alt="" />
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ asset('img/denah/denah_2d.png') }}" alt="" />
+                            <p>Ini merupakan denah unit logistik yang berada di lantai 3. Penjelasan warna dari gambar yaitu warna hijau adalah kursi, coklat adalah meja, abu" muda adalah brankas dan abu" tua adalah meja bilik karyawan. Dan pada ruang staf logistik, terdapat brankas yang sudah dilabeli sesuai dengan urutan dan letak lantai.</p>
                             <ul class="list-inline">
                                 <li>Tanggal: 3 Februari 2021</li>
                                 <li>Lokasi: Unit Logistik</li>
@@ -138,11 +138,11 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here-->
                             <h2 class="text-uppercase">Denah Tiga Dimensi</h2>                                    
-                            <img class="img-fluid d-block mx-auto" src="{{ asset('img/denah/denah.png') }}" alt="" />
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <img class="img-fluid d-block mx-auto" src="{{ asset('img/denah/denah_3d.jpg') }}" alt="" />
+                            <p>Denah diatas merupakan desain 3 dimensi dari Lantai 3 Telkom Gajah Mada yang dibuat dengan aplikasi Sketchup. Denah digambar keseluruhan agar bisa mengetahui lebih jelas lokasi unit Logistik.</p>
                             <ul class="list-inline">
                                 <li>Tanggal: 3 Februari 2021</li>
-                                <li>Lokasi: Unit Logistik</li>
+                                <li>Lokasi: Lantai 3 Telkom Gajah Mada</li>
                                 <li>Kategori: 3 Dimensi</li>
                             </ul>
                             <button class="btn btn-primary" data-dismiss="modal" type="button">
