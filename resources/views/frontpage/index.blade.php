@@ -5,7 +5,7 @@
 @section('content')
 <header class="masthead">
     <div class="container">
-        <div class="masthead-heading text-uppercase">the inventory</div>
+        <div class="masthead-heading text-uppercase">the inventory mamama</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('frontpage.brankas.create') }}">Tambah Data</a>
     </div>
 </header>
